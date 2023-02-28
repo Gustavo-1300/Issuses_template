@@ -1,19 +1,9 @@
 name: 🪲 Bug Report
 description: Open an issue regarding a bug of LUPA
 title: "[BUG-REPORT] Title of the bug found"
+labels: ["bug"]
 
-labels:
-  - type: dropdown
-    id: lables
-    attributes:
-      label: Labels
-      description: Labels of the bug found
-      multiple: true
-      options:
-        - "CLI"
-        - "Airflow/Scheduler"
-    validations: 
-      required: true
+#milestones
 #assignees:
 body:
   - type: markdown
@@ -21,6 +11,28 @@ body:
       value: |
         Thanks for taking the time to fill out this bug report 🤗
         Make sure there aren't any open/closed issues for this topic 😃
+
+  - type: dropdown
+    id: categories
+    attributes:
+      label: Categories
+      description: Categories of the bug found
+      multiple: true
+      options:
+        - "CLI - Migrations"
+        - "CLI - Generate Schema CSV"
+        - "Airflow/Scheduler"
+        - "Notebook"
+        - "DataQuality / GreatExpectation"
+        - "Documentation"
+        - "Spark Configuration"
+        - "Profiles / Panels"
+        - "DEV Environment"
+        - "STAGE Environment"
+        - "PROD Environment"
+        - "Feature-Factory API"
+    validations: 
+      required: true
 
   - type: textarea
     id: bug-description
