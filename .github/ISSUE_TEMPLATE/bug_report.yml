@@ -1,0 +1,53 @@
+name: 🪲 Bug Report
+description: Open an issue regarding a bug of LUPA
+title: "[BUG-REPORT] Title of the bug found"
+
+labels:
+  - type: dropdown
+    id: lables
+    attributes:
+      label: Labels
+      description: Labels of the bug found
+      multiple: true
+      options:
+        - "CLI"
+        - "Airflow/Scheduler"
+    validations: 
+      required: true
+#assignees:
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report 🤗
+        Make sure there aren't any open/closed issues for this topic 😃
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Description of the bug
+      description: Give us a brief description of what happened and what should have happened
+      placeholder: |
+        Description of the bug
+        More description
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps To Reproduce
+      description: Steps to reproduce the behavior.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Scroll down to '...'
+        4. See error
+    validations:
+      required: false
+  - type: textarea
+    id: additional-information
+    attributes:
+      label: Additional Information
+      description: |
+        Provide any additional information such as logs, screenshots, likes, scenarios in which the bug occurs so that it facilitates resolving the issue.
