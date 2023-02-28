@@ -9,7 +9,8 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report 🤗
+        #### Thanks for taking the time to fill out this bug report 🤗
+        ------
         Make sure there aren't any open/closed issues for this topic 😃
 
   - type: dropdown
@@ -21,18 +22,29 @@ body:
       options:
         - "CLI - Migrations"
         - "CLI - Generate Schema CSV"
+        - "CLI - Add Partition"
+        - "CLI - Fill Profile History"
         - "Airflow/Scheduler"
         - "Notebook"
         - "DataQuality / GreatExpectation"
         - "Documentation"
         - "Spark Configuration"
         - "Profiles / Panels"
-        - "DEV Environment"
-        - "STAGE Environment"
-        - "PROD Environment"
         - "Feature-Factory API"
+        - "CI/CD"
     validations: 
       required: true
+
+  - type: checkboxes
+    id: environments
+    attributes:
+      label: Environments
+      description: Bug found in environments
+      options:
+        - label: FEATURE BRANCH
+        - label: DEV
+        - label: STAGE
+        - label: PRD
 
   - type: textarea
     id: bug-description
@@ -57,9 +69,50 @@ body:
         4. See error
     validations:
       required: false
+    
   - type: textarea
-    id: additional-information
+    id: logs
     attributes:
-      label: Additional Information
-      description: |
-        Provide any additional information such as logs, screenshots, likes, scenarios in which the bug occurs so that it facilitates resolving the issue.
+      label: Relevant Log Output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: Shell
+  
+  - type: dropdown
+    id: critical
+    attributes:
+        label: Critical
+        description: Is this bug critical for your squad?
+        options:
+          - "No"
+          - "Yes"
+    validations: 
+      required: true
+
+  - type: dropdown
+    id: fix
+    attributes:
+        label: Fix
+        description: Do you have na idea of how to fix it?
+        options:
+          - "No"
+          - "Yes"
+    validations: 
+      required: true
+  
+  - type: textarea
+    id: known-fix
+    attributes:
+      label: Known Fix
+      description: Feel free to propose your fix here
+      render: Markdown
+
+  - type: dropdown
+    id: pull-request
+    attributes:
+        label: Pull Request
+        description: Are you willing to submit a PR?
+        options:
+          - "No"
+          - "Yes"
+    validations: 
+      required: true
