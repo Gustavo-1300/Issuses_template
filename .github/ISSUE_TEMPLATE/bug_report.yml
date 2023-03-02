@@ -65,9 +65,8 @@ body:
     attributes:
       label: Steps To Reproduce
       description: |
-        Steps to reproduce the behavior (include code when possibe inside 
-        triple "single quotation marks")
-      placeholder: |
+        Steps to reproduce the behavior, include some code to reproduce when possibe
+      value: |
         <!---
         This comment will not render. Start by providing some initial steps that should
         be followed
@@ -96,7 +95,6 @@ body:
         Or a link to the same lines of code
         https://github.com/Gustavo-1300/Issuses_template/blob/8edcee68b01f4a58a48d1c387d4cec9d1770ed0e/example/test.py#L1-L3
         -->
-      render: Markdown
     validations:
       required: false
     
@@ -138,7 +136,7 @@ body:
     attributes:
       label: Known Fix
       description: Feel free to propose your fix here
-      placeholder: |
+      value: |
         <!---
         This comment will not render. You should provide both the location of the code
         where the bug happens, e.g.:
@@ -154,7 +152,6 @@ body:
         x = np.array([1,3])
         '''
         -->
-      render: Markdown
     validations:
       required: false
 
