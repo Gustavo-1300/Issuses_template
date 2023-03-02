@@ -17,7 +17,7 @@ body:
     id: categories
     attributes:
       label: Categories
-      description: Categories of the bug found
+      description: Categories of the bug found (select all that apply)
       multiple: true
       options:
         - "CLI - Migrations"
@@ -39,7 +39,7 @@ body:
     id: environments
     attributes:
       label: Environments
-      description: Bug found in environments
+      description: Bug found in environments (select all that apply)
       options:
         - label: FEATURE BRANCH
         - label: DEV
@@ -50,10 +50,13 @@ body:
     id: bug-description
     attributes:
       label: Description of the bug
-      description: Give us a brief description of what happened and what should have happened
+      description: |
+        Give us a brief description of what and how it happened and what 
+        was expected to have happened
       placeholder: |
-        Description of the bug
-        More description
+        What were trying to do before the bug?
+        What did you observe after the bug happened?
+        What were you expecting to observe instead?
     validations:
       required: true
 
@@ -61,12 +64,39 @@ body:
     id: steps-to-reproduce
     attributes:
       label: Steps To Reproduce
-      description: Steps to reproduce the behavior.
+      description: |
+        Steps to reproduce the behavior (include code when possibe inside 
+        triple "single quotation marks")
       placeholder: |
+        <!---
+        This comment will not render. Start by providing some initial steps that should
+        be followed
         1. Go to '...'
         2. Click on '...'
         3. Scroll down to '...'
-        4. See error
+        -->
+
+        <!---
+        Some line that you can run to generate the error 
+        '''shell 
+        python manage.py generate_schema_csv -n EXAMPLE_PROFILE -p 19000101
+        '''
+        -->
+
+        <!---
+        Some code that is called that triggers the issue
+        '''python
+        import lupa
+        x = 'a' + 'b'
+        print(x)
+        '''
+        -->
+        
+        <!---
+        Or a link to the same lines of code
+        https://github.com/Gustavo-1300/Issuses_template/blob/8edcee68b01f4a58a48d1c387d4cec9d1770ed0e/example/test.py#L1-L3
+        -->
+      render: Markdown
     validations:
       required: false
     
@@ -74,8 +104,12 @@ body:
     id: logs
     attributes:
       label: Relevant Log Output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      description: |
+        Please copy and paste any relevant log output. This will be
+        automatically formatted into code, so no need for backticks.
       render: Shell
+    validations:
+      required: false
   
   - type: dropdown
     id: critical
@@ -104,13 +138,31 @@ body:
     attributes:
       label: Known Fix
       description: Feel free to propose your fix here
+      placeholder: |
+        <!---
+        This comment will not render. You should provide both the location of the code
+        where the bug happens, e.g.:
+
+        The bug can be found in these lines:
+        https://github.com/Gustavo-1300/Issuses_template/blob/8edcee68b01f4a58a48d1c387d4cec9d1770ed0e/example/test.py#L1-L3
+        -->
+
+        <!---
+        Also include your suggestion, preferably in a code snippet:
+        '''python
+        import numpy as np
+        x = np.array([1,3])
+        '''
+        -->
       render: Markdown
+    validations:
+      required: false
 
   - type: dropdown
     id: pull-request
     attributes:
         label: Pull Request
-        description: Are you willing to submit a PR?
+        description: Are you willing to submit a PR (with the help of Squad Enablement)?
         options:
           - "No"
           - "Yes"
