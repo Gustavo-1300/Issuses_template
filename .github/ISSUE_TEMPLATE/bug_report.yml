@@ -77,18 +77,18 @@ body:
 
         <!---
         Some line that you can run to generate the error 
-        '''shell 
+        ```shell 
         python manage.py generate_schema_csv -n EXAMPLE_PROFILE -p 19000101
-        '''
+        ```
         -->
 
         <!---
         Some code that is called that triggers the issue
-        '''python
+        ```python
         import lupa
         x = 'a' + 'b'
         print(x)
-        '''
+        ```
         -->
         
         <!---
@@ -147,10 +147,10 @@ body:
 
         <!---
         Also include your suggestion, preferably in a code snippet:
-        '''python
+        ```python
         import numpy as np
         x = np.array([1,3])
-        '''
+        ```
         -->
     validations:
       required: false
