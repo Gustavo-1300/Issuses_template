@@ -9,8 +9,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        #### Thanks for taking the time to fill out this bug report 🤗 Plase don't
-        forget to select the apropriate labels for the issue in the side bar
+        #### Thanks for taking the time to fill out this bug report 🤗 Plase don't forget to select the apropriate labels for the issue in the side bar
         ------
         Make sure there aren't any open/closed issues for this topic 😃
 
@@ -52,8 +51,7 @@ body:
     attributes:
       label: Description of the bug
       description: |
-        Give us a brief description of what and how it happened and what 
-        was expected to have happened
+        Give us a brief description of what and how it happened and what was expected to have happened
       placeholder: |
         What were trying to do before the bug?
         What did you observe after the bug happened?
@@ -69,8 +67,7 @@ body:
         Steps to reproduce the behavior, include some code to reproduce when possibe
       value: |
         <!---
-        This comment will not render. Start by providing some initial steps that should
-        be followed
+        This comment will not render. Start by providing some initial steps that should be followed
         1. Go to '...'
         2. Click on '...'
         3. Scroll down to '...'
@@ -104,8 +101,7 @@ body:
     attributes:
       label: Relevant Log Output
       description: |
-        Please copy and paste any relevant log output. This will be
-        automatically formatted into code, so no need for backticks.
+        Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
       render: Shell
     validations:
       required: false
@@ -139,8 +135,7 @@ body:
       description: Feel free to propose your fix here
       value: |
         <!---
-        This comment will not render. You should provide both the location of the code
-        where the bug happens, e.g.:
+        This comment will not render. You should provide both the location of the code where the bug happens, e.g.:
 
         The bug can be found in these lines:
         https://github.com/Gustavo-1300/Issuses_template/blob/8edcee68b01f4a58a48d1c387d4cec9d1770ed0e/example/test.py#L1-L3
