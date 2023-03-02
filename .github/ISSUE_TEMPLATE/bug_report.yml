@@ -9,7 +9,8 @@ body:
   - type: markdown
     attributes:
       value: |
-        #### Thanks for taking the time to fill out this bug report 🤗
+        #### Thanks for taking the time to fill out this bug report 🤗 Plase don't
+        forget to select the apropriate labels for the issue in the side bar
         ------
         Make sure there aren't any open/closed issues for this topic 😃
 
