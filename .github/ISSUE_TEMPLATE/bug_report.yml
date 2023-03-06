@@ -36,10 +36,10 @@ body:
       required: true
 
   - type: checkboxes
-    id: version
+    id: environments
     attributes:
-      label: Version
-      description: In which version of LUPA was the bug found (select all that apply)
+      label: Environments
+      description: Bug found in environments (select all that apply)
       options:
         - label: FEATURE BRANCH
         - label: DEV
@@ -103,15 +103,6 @@ body:
       description: |
         Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
       render: Shell
-    validations:
-      required: false
-
-  - type: textarea
-    id: env
-    attributes:
-      label: Python Enviroment
-      description: |
-        Please provide the requirements to replicate the python enviroment where the bug occured (you can use the following command pip3 freeze > requirements.txt)
     validations:
       required: false
   
