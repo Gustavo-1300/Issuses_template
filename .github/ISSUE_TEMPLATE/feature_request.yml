@@ -91,9 +91,9 @@ body:
       required: true
 
   - type: dropdown
-    id: feature
+    id: feature-implementation
     attributes:
-      label: Feature
+      label: Feature Implementation
       description: Do you have an idea on how to implement this feature?
       options:
         - "No"
@@ -102,9 +102,9 @@ body:
       required: true
 
   - type: textarea
-    id: known-feature
+    id: feature-code
     attributes:
-      label: Known Feature
+      label: Feature Code
       description: Feel free to propose the code (or some part of it) for the feature here
       value: |
         <!---
