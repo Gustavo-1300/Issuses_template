@@ -17,16 +17,13 @@ body:
     id: categories
     attributes:
       label: Categories
-      description: Categories related to the feature (select all that apply)
+      description: On which categories you want to apply this new feature?
       multiple: true
       options:
-        - "CLI - Migrations"
-        - "CLI - Generate Schema CSV"
-        - "CLI - Add Partition"
-        - "CLI - Fill Profile History"
-        - "Airflow/Scheduler"
+        - "CLI"
+        - "Airflow"
         - "Notebook"
-        - "DataQuality / GreatExpectation"
+        - "GreatExpectation"
         - "Documentation"
         - "Spark Configuration"
         - "Profiles / Panels"
@@ -35,16 +32,12 @@ body:
     validations:
       required: true
 
-  - type: checkboxes
-    id: version
+  - type: input
+    id: branch
     attributes:
-      label: Version
-      description: In which version of LUPA you want to have this feature (select all that apply)
-      options:
-        - label: FEATURE BRANCH
-        - label: DEV
-        - label: STAGE
-        - label: PRD
+      label: Branch
+      description: In which branch you want to apply this new feature?
+      placeholder: feature-banch-name, development, stage, and/or production
 
   - type: textarea
     id: bug-description
@@ -72,7 +65,7 @@ body:
     attributes:
       label: Relevant Log Output
       description: |
-        Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+        Please copy and paste any relevant log output of this new feature. This will be automatically formatted into code, so no need for backticks.
       render: Shell
     validations:
       required: false
