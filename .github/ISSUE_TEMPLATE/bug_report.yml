@@ -20,31 +20,31 @@ body:
       description: Categories of the bug found (select all that apply)
       multiple: true
       options:
-        - "CLI - Migrations"
-        - "CLI - Generate Schema CSV"
-        - "CLI - Add Partition"
-        - "CLI - Fill Profile History"
-        - "Airflow/Scheduler"
+        - "CLI"
+        - "Airflow"
         - "Notebook"
-        - "DataQuality / GreatExpectation"
+        - "GreatExpectation"
         - "Documentation"
         - "Spark Configuration"
         - "Profiles / Panels"
         - "Feature-Factory API"
         - "CI/CD"
-    validations: 
+    validations:
       required: true
 
-  - type: checkboxes
-    id: version
+  - type: input
+    id: branch
     attributes:
-      label: Version
-      description: In which version of LUPA was the bug found (select all that apply)
-      options:
-        - label: FEATURE BRANCH
-        - label: DEV
-        - label: STAGE
-        - label: PRD
+      label: Branch
+      description: In which branch are you having the bug?
+      placeholder: feature-banch-name, development, stage, and/or production
+
+  - type: input
+    id: repo
+    attributes:
+      label: Repository
+      description: Please provide the Repo's link of the code where you are having the bug?
+      placeholder: https://github.com/nosportugal/dsi-de-data-product-relapses/blob/dev/orchestration-tools/orchestration/lupa/profiles/active_bundles/main.py
 
   - type: textarea
     id: bug-description
@@ -88,20 +88,20 @@ body:
         print(x)
         ```
         -->
-        
+
         <!---
         Or a link to the same lines of code
         https://github.com/Gustavo-1300/Issuses_template/blob/8edcee68b01f4a58a48d1c387d4cec9d1770ed0e/example/test.py#L1-L3
         -->
     validations:
       required: false
-    
+
   - type: textarea
     id: logs
     attributes:
       label: Relevant Log Output
       description: |
-        Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+        Please copy and paste any relevant log output and/or log file content. This will be automatically formatted into code, so no need for backticks.
       render: Shell
     validations:
       required: false
@@ -114,29 +114,29 @@ body:
         Please provide the requirements to replicate the python enviroment where the bug occured (you can use the following command pip3 freeze > requirements.txt)
     validations:
       required: false
-  
+
   - type: dropdown
     id: critical
     attributes:
-        label: Critical
-        description: Is this bug critical for your squad?
-        options:
-          - "No"
-          - "Yes"
-    validations: 
+      label: Critical
+      description: Is this bug critical for your squad?
+      options:
+        - "No"
+        - "Yes"
+    validations:
       required: true
 
   - type: dropdown
     id: fix
     attributes:
-        label: Fix
-        description: Do you have na idea of how to fix it?
-        options:
-          - "No"
-          - "Yes"
-    validations: 
+      label: Fix
+      description: Do you have an idea of how to fix it?
+      options:
+        - "No"
+        - "Yes"
+    validations:
       required: true
-  
+
   - type: textarea
     id: known-fix
     attributes:
@@ -163,10 +163,10 @@ body:
   - type: dropdown
     id: pull-request
     attributes:
-        label: Pull Request
-        description: Are you willing to submit a PR (with the help of Squad Enablement)?
-        options:
-          - "No"
-          - "Yes"
-    validations: 
+      label: Pull Request
+      description: Are you willing to submit a PR (with the help of Squad Enablement)?
+      options:
+        - "No"
+        - "Yes"
+    validations:
       required: true
