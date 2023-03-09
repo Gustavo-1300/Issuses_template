@@ -32,12 +32,24 @@ body:
     validations:
       required: true
 
+  - type: checkboxes
+    id: version
+    attributes:
+      label: Version
+      description: In which version of LUPA was the bug found (select all that apply)
+      options:
+        - label: FEATURE BRANCH
+        - label: DEV
+        - label: STAGE
+        - label: PRD
+          required: true
+
   - type: input
     id: branch
     attributes:
       label: Branch
-      description: In which branch are you having the bug?
-      placeholder: feature-banch-name, development, stage, and/or production
+      description: If needed, you can specify here the name of your branch.
+      placeholder: bug-lupa-feature-branch-data-product-squad
 
   - type: input
     id: repo
@@ -101,7 +113,7 @@ body:
     attributes:
       label: Relevant Log Output
       description: |
-        Please copy and paste any relevant log output and/or log file content. This will be automatically formatted into code, so no need for backticks.
+        Please copy and paste any relevant log output (alternatively, you can add the log file to "Description of the bug"). This will be automatically formatted into code, so no need for backticks.
       render: Shell
     validations:
       required: false
