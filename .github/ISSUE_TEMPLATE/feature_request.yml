@@ -62,7 +62,14 @@ body:
       render: Shell
     validations:
       required: false
-
+  
+  - type: input
+    id: python-version
+    attributes:
+      label: Python Version
+      description: Please provide the python version where the bug occured (you can use the following command python --version)
+      placeholder: Python 3.7
+  
   - type: textarea
     id: env
     attributes:
@@ -113,8 +120,8 @@ body:
   - type: dropdown
     id: pull-request
     attributes:
-      label: Pull Request
-      description: Are you willing to submit a PR (with the help of Squad Enablement)?
+      label: 🏆 Challenge - Pull Request
+      description: Are you up for a challenge? Please submit your PR (with the help of Squad Enablement).
       options:
         - "No"
         - "Yes"
