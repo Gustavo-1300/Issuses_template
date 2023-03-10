@@ -42,7 +42,6 @@ body:
         - label: DEV
         - label: STAGE
         - label: PRD
-          required: true
 
   - type: input
     id: branch
