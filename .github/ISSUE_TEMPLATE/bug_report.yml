@@ -1,7 +1,7 @@
 name: 🪲 Bug Report
 description: Open an issue regarding a bug of LUPA
 title: "[BUG-REPORT] Title of the bug found"
-labels: ["bug"]
+labels: ["bug"]["needs-triage"]
 
 #milestones
 #assignees:
@@ -9,9 +9,9 @@ body:
   - type: markdown
     attributes:
       value: |
-        #### Thanks for taking the time to fill out this bug report 🤗 Plase don't forget to select the apropriate labels for the issue in the side bar
+        #### Thanks for taking the time to fill out this bug report 🤗
         ------
-        Make sure there aren't any open/closed issues for this topic 😃
+        Make sure there aren't any open/closed issues for this topic, don't want to create an infestation 😃
 
   - type: dropdown
     id: categories
@@ -62,7 +62,7 @@ body:
     attributes:
       label: Description of the bug
       description: |
-        Give us a brief description of what and how it happened and what was expected to have happened
+        Give us a brief description of what and how it happened and what was expected to have happened. Spare no details!
       placeholder: |
         What were trying to do before the bug?
         What did you observe after the bug happened?
@@ -75,7 +75,7 @@ body:
     attributes:
       label: Steps To Reproduce
       description: |
-        Steps to reproduce the behavior, include some code to reproduce when possibe
+        We need your help to track it down 🕵️! Steps to reproduce the behavior, include some code to reproduce when possibe
       value: |
         <!---
         This comment will not render. Start by providing some initial steps that should be followed
@@ -110,7 +110,7 @@ body:
   - type: textarea
     id: logs
     attributes:
-      label: Relevant Log Output
+      label: 📃 Relevant Log Output
       description: |
         Please copy and paste any relevant log output (alternatively, you can add the log file to "Description of the bug"). This will be automatically formatted into code, so no need for backticks.
       render: Shell
@@ -120,7 +120,7 @@ body:
   - type: input
     id: python-version
     attributes:
-      label: Python Version
+      label: 🐍 Python Version
       description: Please provide the python version where the bug occured (you can use the following command python --version)
       placeholder: Python 3.7
 
@@ -136,8 +136,8 @@ body:
   - type: dropdown
     id: critical
     attributes:
-      label: Critical
-      description: Is this bug critical for your squad?
+      label: ❗ Critical
+      description: Is this bug critical for your squad? Is it bugging you down?
       options:
         - "No"
         - "Yes"
@@ -159,7 +159,7 @@ body:
     id: known-fix
     attributes:
       label: Known Fix
-      description: Feel free to propose your fix here
+      description: Feel free to propose your fix here. Elementary, my dear Watson!
       value: |
         <!---
         This comment will not render. You should provide both the location of the code where the bug happens, e.g.:

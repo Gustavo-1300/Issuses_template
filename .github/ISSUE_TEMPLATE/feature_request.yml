@@ -1,7 +1,7 @@
 name: ✨ Feature Request
 description: Request a new feature for LUPA
 title: "[FEATURE-REQUEST] Title of the new feature"
-labels: ["feature"]
+labels: ["feature"]["needs-triage"]
 
 #milestones
 #assignees:
@@ -9,9 +9,9 @@ body:
   - type: markdown
     attributes:
       value: |
-        #### Thanks for taking the time to fill out this form for the feature request 🤗 Plase don't forget to select the apropriate labels in the side bar
+        #### Thanks for taking the time to fill out this form for the feature request 🤗
         ------
-        Make sure there aren't any open/closed issues for this feature 😃
+        Make sure there aren't any open/closed issues for this feature, nothing worse than duplicating work 😃
 
   - type: dropdown
     id: categories
@@ -37,7 +37,7 @@ body:
     attributes:
       label: Description of the feature
       description: |
-        Give us a brief description of what this new feature could solve and/or LUPA is not doing
+        Give us a brief description of what this new feature could solve and/or LUPA is not doing. Spare no details!
       placeholder: |
         **Is your feature request related to a problem? Please describe.**
         A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
@@ -56,7 +56,7 @@ body:
   - type: textarea
     id: logs
     attributes:
-      label: Relevant Log Output
+      label: 📃 Relevant Log Output
       description: |
         Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
       render: Shell
@@ -66,7 +66,7 @@ body:
   - type: input
     id: python-version
     attributes:
-      label: Python Version
+      label: 🐍 Python Version
       description: Please provide the python version where the bug occured (you can use the following command python --version)
       placeholder: Python 3.7
   
@@ -82,7 +82,7 @@ body:
   - type: dropdown
     id: critical
     attributes:
-      label: Critical
+      label: ❗ Critical
       description: Is this feature critical for your squad?
       options:
         - "No"
@@ -94,7 +94,7 @@ body:
     id: feature-implementation
     attributes:
       label: Feature Implementation
-      description: Do you have an idea on how to implement this feature?
+      description: Do you have an idea on how to implement this feature? Lead the way!
       options:
         - "No"
         - "Yes"
