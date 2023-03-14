@@ -1,7 +1,7 @@
 name: 🪲 Bug Report
 description: Open an issue regarding a bug of LUPA
 title: "[BUG-REPORT] Title of the bug found"
-labels: ["bug"]["needs-triage"]
+labels: ["bug","needs-triage"]
 
 #milestones
 #assignees:
